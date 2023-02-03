@@ -3,6 +3,21 @@
 Bench-executor is a simple tool to execute benchmarks on tools which are running
 in Docker.
 
+## Setup
+
+The tool executes the cases as followed:
+
+1. Data is loaded (if needed), depending on the execution plan.
+2. Collecting of metrics such as execution time is started.
+3. The execution plan is executed, step-by-step. 
+Each case has data, mappings and queries to execute 
+according to a [specific execution plan](#generating-cases) which gets executed,
+for example, 7 times.
+4. When the execution is complete, the median run based on execution time is used
+to generate tables and graphs.
+
+![Tool setup](tool_setup.jpg "Tool setup")
+
 ## How to use?
 
 You can list all options and arguments with `--help`
